@@ -9,5 +9,7 @@ RUN apt update && apt upgrade -y && \
     cat /etc/default/icecast2 && \
     apt autoremove && apt clean && \
     rm -rf /var/lib/apt/lists/*
+    
+EXPOSE 8000
 
 CMD /etc/init.d/icecast2 start && tail -F /var/log/icecast2/error.log
