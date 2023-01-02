@@ -12,4 +12,5 @@ RUN apt update && apt upgrade -y && \
     
 EXPOSE 8000
 
-CMD /etc/init.d/icecast2 start && tail -F /var/log/icecast2/error.log
+# CMD /etc/init.d/icecast2 start && tail -F /var/log/icecast2/error.log
+CMD /etc/init.d/icecast2 start
